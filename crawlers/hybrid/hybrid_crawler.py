@@ -93,13 +93,13 @@ class HybridCrawler:
 
         """
         以下为(视频||图片)数据处理的四个方法,如果你需要自定义数据处理请在这里修改.
-        The following are four methods of (video || image) data processing. 
+        The following are four methods of (video || image) data processing.
         If you need to customize data processing, please modify it here.
         """
 
         """
         创建已知数据字典(索引相同)，稍后使用.update()方法更新数据
-        Create a known data dictionary (index the same), 
+        Create a known data dictionary (index the same),
         and then use the .update() method to update the data
         """
 
@@ -177,9 +177,9 @@ class HybridCrawler:
                             'wm_video_url': wm_video,
                             'wm_video_url_HQ': wm_video,
                             # 'nwm_video_url': data['video']['playAddr'],
-                            'nwm_video_url': data['video']['play_addr']['url_list'][0],
+                            'nwm_video_url': data['video']['play_addr']['url_list'][0], # H264编码
                             # 'nwm_video_url_HQ': data['video']['bitrateInfo'][0]['PlayAddr']['UrlList'][0]
-                            'nwm_video_url_HQ': data['video']['bit_rate'][0]['play_addr']['url_list'][0]
+                            'nwm_video_url_HQ': data['video']['bit_rate'][0]['play_addr']['url_list'][0] # H265编码
                         }
                 }
             # TikTok图片数据处理/TikTok image data processing
